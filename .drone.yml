@@ -59,9 +59,8 @@ platform:
 
 steps:
 - name: run tests
-  image: python:3.9-alpine
+  image: python:3.9
   commands:
-  - cat alpine.depends | xargs apk add # installing required dependencies
   - pip install pipenv
   - pipenv install --system --deploy --ignore-pipfile --dev
   - pytest
