@@ -1,5 +1,6 @@
 import pytest
 
+
 def test_import_tensorflow() -> None:
     try:
         import tensorflow as tf
@@ -7,4 +8,3 @@ def test_import_tensorflow() -> None:
             pytest.fail("No GPU detected")
     except Exception as e:
         pytest.fail(e)
-
