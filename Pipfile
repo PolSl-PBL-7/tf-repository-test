@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 wandb = "*"
+tensorflow = "*"
 
 [dev-packages]
 debugpy = "*"
