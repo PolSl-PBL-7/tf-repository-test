@@ -61,7 +61,9 @@ steps:
 - name: run tests
   image: python:3.9
   commands:
+  - cat debian.depends | xargs apt-get install -y # installing required dependencies
   - pip install pipenv
+  - cat Pipfile.replace | xargs pipenv install # replace tensorflow
   - pipenv install --system --deploy --ignore-pipfile --dev
   - pytest
   trigger:
