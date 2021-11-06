@@ -5,7 +5,7 @@ name = "pypi"
 
 [packages]
 wandb = "*"
-tensorflow = "*"
+tensorflow = { version = "*", platform_system = "!= 'Darwin'" }
 atomicwrites = "*"
 
 [dev-packages]
